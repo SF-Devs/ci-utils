@@ -1,0 +1,4 @@
+{
+  "commandDescription": "generates a comma separated string with all the names of test classes in the referred folder",
+  "pathFlagDescription": "path to Apex classes"
+}
