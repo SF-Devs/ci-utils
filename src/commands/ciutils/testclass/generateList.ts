@@ -14,7 +14,7 @@ export default class Org extends SfdxCommand {
   public static description = messages.getMessage('commandDescription');
 
   public static examples = [
-    `$ sfdx ciutils:generateTestClassNames --path
+    `$ sfdx ciutils:testclass:generateList --path
   Class1,Class2,Class3
   `
   ];

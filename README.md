@@ -22,7 +22,7 @@ $ npm install -g sfciutils
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-sfciutils/0.0.1 darwin-x64 node-v15.10.0
+sfciutils/1.0.0 darwin-x64 node-v15.10.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -30,7 +30,84 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
+* [`sfdx ciutils:entitlement:removeIfEqual [-p <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-ciutilsentitlementremoveifequal--p-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+* [`sfdx ciutils:flow:removeIfEqual [-p <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-ciutilsflowremoveifequal--p-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+* [`sfdx ciutils:testclass:generateList [-p <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-ciutilstestclassgeneratelist--p-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 
+## `sfdx ciutils:entitlement:removeIfEqual [-p <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+generates a comma separated string with all the names of test classes in the referred folder
+
+```
+generates a comma separated string with all the names of test classes in the referred folder
+
+USAGE
+  $ sfdx ciutils:entitlement:removeIfEqual [-p <string>] [--json] [--loglevel 
+  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+OPTIONS
+  -p, --path=path                                                                   path to Apex classes
+  --json                                                                            format output as json
+
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+
+EXAMPLE
+  $ sfdx ciutils:generateTestClassNames --path
+     Class1,Class2,Class3
+```
+
+_See code: [lib/commands/ciutils/entitlement/removeIfEqual.js](https://github.com/SF-Devs/ci-utils/blob/v1.0.0/lib/commands/ciutils/entitlement/removeIfEqual.js)_
+
+## `sfdx ciutils:flow:removeIfEqual [-p <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+generates a comma separated string with all the names of test classes in the referred folder
+
+```
+generates a comma separated string with all the names of test classes in the referred folder
+
+USAGE
+  $ sfdx ciutils:flow:removeIfEqual [-p <string>] [--json] [--loglevel 
+  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+OPTIONS
+  -p, --path=path                                                                   path to Apex classes
+  --json                                                                            format output as json
+
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+
+EXAMPLE
+  $ sfdx ciutils:generateTestClassNames --path
+     Class1,Class2,Class3
+```
+
+_See code: [lib/commands/ciutils/flow/removeIfEqual.js](https://github.com/SF-Devs/ci-utils/blob/v1.0.0/lib/commands/ciutils/flow/removeIfEqual.js)_
+
+## `sfdx ciutils:testclass:generateList [-p <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+generates a comma separated string with all the names of test classes in the referred folder
+
+```
+generates a comma separated string with all the names of test classes in the referred folder
+
+USAGE
+  $ sfdx ciutils:testclass:generateList [-p <string>] [--json] [--loglevel 
+  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+OPTIONS
+  -p, --path=path                                                                   path to Apex classes
+  --json                                                                            format output as json
+
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+
+EXAMPLE
+  $ sfdx ciutils:testclass:generateList --path
+     Class1,Class2,Class3
+```
+
+_See code: [lib/commands/ciutils/testclass/generateList.js](https://github.com/SF-Devs/ci-utils/blob/v1.0.0/lib/commands/ciutils/testclass/generateList.js)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin

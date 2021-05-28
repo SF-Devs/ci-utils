@@ -1,0 +1,8 @@
+{
+  "commandDescription": "removes components from the deployment folder in case they already exist and are the same.",
+  "nameFlagDescription": "name to print",
+  "forceFlagDescription": "example boolean flag",
+  "errorNoOrgResults": "No results found for the org '%s'.",
+  "retrieved": "path to component retrieved from destination org for comparison",
+  "toupload": "path to component that are going to be deployed"
+}
