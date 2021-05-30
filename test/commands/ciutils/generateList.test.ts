@@ -11,7 +11,7 @@ describe('Test Error if no Path', () => {
     });
 });
 
-describe('Test Error if no Path', () => {
+describe('Test File Exists and Add Test2 to List', () => {
   const mockFolders = () => {
     const mockfsConf = {
       'package.json': mockfs.load(path.resolve(__dirname, '../../../package.json')),
