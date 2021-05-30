@@ -18,4 +18,5 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm install --global yarn
+      - run: yarn add -D nyc
       - run: yarn test
