@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Publish to NPM when merged to main
 
 # Controls when the action will run. 
 on:
@@ -32,4 +32,6 @@ jobs:
         run: yarn test
       - name: deploy to NPM
         if: ${{ success() }}
-        run: npm deploy 
+        run: npm publish 
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
