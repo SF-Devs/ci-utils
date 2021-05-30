@@ -56,7 +56,7 @@ export default class Org extends SfdxCommand {
       return (data.includes('@istest'));
     });
 
-    const returnString = testFiles.join().replaceAll('.cls','');
+    const returnString = testFiles.join().replaceAll('.cls', '');
     this.ux.log(returnString);
     return testFiles;
   }
