@@ -1,7 +1,7 @@
 {
   "name": "sfciutils",
   "description": "Salesforce DX plugin for centralising utilities for CI/CD",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Marcelo Marsson, Adam Best",
   "bugs": "https://github.com/SF-Devs/ci-utils/issues",
   "dependencies": {
