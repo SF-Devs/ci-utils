@@ -18,9 +18,9 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm install --global yarn
+      - run: yarn add -D nyc
       - name: Run tests and publish results
         run: |
-          npm install -g nyc
-          nyc npm test
+          yarn test
           nyc report --reporter=lcov
           ./node_modules/.bin/codecov
