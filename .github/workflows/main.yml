@@ -22,5 +22,5 @@ jobs:
       - name: Run tests and publish results
         run: |
           yarn test
-          nyc report --reporter=lcov
+          yarn report-coverage
           ./node_modules/.bin/codecov
