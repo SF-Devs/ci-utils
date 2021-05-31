@@ -22,5 +22,4 @@ jobs:
       - name: Run tests and publish results
         run: |
           yarn test
-          yarn report-coverage
           ./node_modules/.bin/codecov
