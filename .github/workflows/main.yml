@@ -23,3 +23,5 @@ jobs:
         run: |
           yarn test
           ./node_modules/.bin/codecov
+        env:
+          CODECOV_TOKEN: dc5905ce-46c6-48b8-9ce3-5e7bf4c347da
