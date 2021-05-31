@@ -4,9 +4,9 @@ sfciutils
 Salesforce DX plugin for centralising utilities for CI/CD
 
 [![Version](https://img.shields.io/npm/v/sfciutils.svg)](https://npmjs.org/package/sfciutils)
-[![CircleCI](https://circleci.com/gh/SF-Devs/ci-utils/tree/master.svg?style=shield)](https://circleci.com/gh/SF-Devs/ci-utils/tree/master)
+[![CircleCI](https://circleci.com/gh/SF-Devs/ci-utils/tree/master.svg?style=shield)](https://circleci.com/gh/SF-Devs/ci-utils/tree/main)
 [![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/SF-Devs/ci-utils?branch=master&svg=true)](https://ci.appveyor.com/project/heroku/ci-utils/branch/master)
-[![Codecov](https://codecov.io/gh/SF-Devs/ci-utils/branch/master/graph/badge.svg)](https://codecov.io/gh/SF-Devs/ci-utils)
+[![Codecov](https://codecov.io/gh/SF-Devs/ci-utils/branch/main/graph/badge.svg)](https://codecov.io/gh/SF-Devs/ci-utils)
 [![Greenkeeper](https://badges.greenkeeper.io/SF-Devs/ci-utils.svg)](https://greenkeeper.io/)
 [![Known Vulnerabilities](https://snyk.io/test/github/SF-Devs/ci-utils/badge.svg)](https://snyk.io/test/github/SF-Devs/ci-utils)
 [![Downloads/week](https://img.shields.io/npm/dw/sfciutils.svg)](https://npmjs.org/package/sfciutils)
