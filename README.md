@@ -4,8 +4,6 @@ sfciutils
 Salesforce DX plugin for centralising utilities for CI/CD
 
 [![Version](https://img.shields.io/npm/v/sfciutils.svg)](https://npmjs.org/package/sfciutils)
-[![CircleCI](https://circleci.com/gh/SF-Devs/ci-utils/tree/master.svg?style=shield)](https://circleci.com/gh/SF-Devs/ci-utils/tree/main)
-[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/SF-Devs/ci-utils?branch=master&svg=true)](https://ci.appveyor.com/project/heroku/ci-utils/branch/master)
 [![codecov](https://codecov.io/gh/SF-Devs/ci-utils/branch/main/graph/badge.svg?token=QKN094UUDP)](https://codecov.io/gh/SF-Devs/ci-utils)
 [![Known Vulnerabilities](https://snyk.io/test/github/SF-Devs/ci-utils/badge.svg)](https://snyk.io/test/github/SF-Devs/ci-utils)
 [![Downloads/week](https://img.shields.io/npm/dw/sfciutils.svg)](https://npmjs.org/package/sfciutils)
