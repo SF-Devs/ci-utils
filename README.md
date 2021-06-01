@@ -7,7 +7,6 @@ Salesforce DX plugin for centralising utilities for CI/CD
 [![CircleCI](https://circleci.com/gh/SF-Devs/ci-utils/tree/master.svg?style=shield)](https://circleci.com/gh/SF-Devs/ci-utils/tree/main)
 [![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/SF-Devs/ci-utils?branch=master&svg=true)](https://ci.appveyor.com/project/heroku/ci-utils/branch/master)
 [![codecov](https://codecov.io/gh/SF-Devs/ci-utils/branch/main/graph/badge.svg?token=QKN094UUDP)](https://codecov.io/gh/SF-Devs/ci-utils)
-[![Greenkeeper](https://badges.greenkeeper.io/SF-Devs/ci-utils.svg)](https://greenkeeper.io/)
 [![Known Vulnerabilities](https://snyk.io/test/github/SF-Devs/ci-utils/badge.svg)](https://snyk.io/test/github/SF-Devs/ci-utils)
 [![Downloads/week](https://img.shields.io/npm/dw/sfciutils.svg)](https://npmjs.org/package/sfciutils)
 [![License](https://img.shields.io/npm/l/sfciutils.svg)](https://github.com/SF-Devs/ci-utils/blob/master/package.json)
