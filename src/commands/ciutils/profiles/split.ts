@@ -1,11 +1,12 @@
 /* tslint:disable */
-import {core, flags, SfdxCommand} from '@salesforce/command';
+import {flags, SfdxCommand} from '@salesforce/command';
 import {SfdxError} from '@salesforce/core';
 import fs = require('fs-extra');
 import convert = require('xml-js');
 import path = require('path');
 import config = require('../../../shared/config.json');
 import chalk from 'chalk';
+import { AnyJson } from '@salesforce/ts-types';
 
 function createModel(key, value) {
   const data = {
@@ -141,7 +142,7 @@ export default class Split extends SfdxCommand {
     return 0;
   }
 
-  public async run(): Promise<core.AnyJson> {
+  public async run(): Promise<AnyJson> {
     const inputDir = this.flags.input;
     const outputDir = this.flags.output;
     const deleteProfile = this.flags.delete;

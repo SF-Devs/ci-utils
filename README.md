@@ -10,15 +10,16 @@ Salesforce DX plugin for centralising utilities for CI/CD
 [![License](https://img.shields.io/npm/l/sfciutils.svg)](https://github.com/SF-Devs/ci-utils/blob/master/package.json)
 
 <!-- toc -->
+
 <!-- tocstop -->
 <!-- install -->
 <!-- usage -->
 ```sh-session
-$ sfdx plugins:install sfciutils
+$ npm install -g sfciutils
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-sfciutils/1.2.1 darwin-x64 node-v15.10.0
+sfciutils/1.2.0 darwin-x64 node-v15.10.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -59,7 +60,7 @@ EXAMPLE
      Class1,Class2,Class3
 ```
 
-_See code: [lib/commands/ciutils/entitlement/removeIfEqual.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.1/lib/commands/ciutils/entitlement/removeIfEqual.js)_
+_See code: [lib/commands/ciutils/entitlement/removeIfEqual.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.0/lib/commands/ciutils/entitlement/removeIfEqual.js)_
 
 ## `sfdx ciutils:flow:removeIfEqual [-r <string>] [-u <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -89,7 +90,7 @@ EXAMPLE
      Class1,Class2,Class3
 ```
 
-_See code: [lib/commands/ciutils/flow/removeIfEqual.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.1/lib/commands/ciutils/flow/removeIfEqual.js)_
+_See code: [lib/commands/ciutils/flow/removeIfEqual.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.0/lib/commands/ciutils/flow/removeIfEqual.js)_
 
 ## `sfdx ciutils:profiles:split -i <string> -o <string> [-d] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -127,6 +128,8 @@ EXAMPLE
            //Splits profiles located in specified input dir and copies them into the output dir.
 ```
 
+_See code: [lib/commands/ciutils/profiles/split.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.0/lib/commands/ciutils/profiles/split.js)_
+
 ## `sfdx ciutils:testclass:generateList [-p <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
 generates a comma separated string with all the names of test classes in the referred folder
@@ -150,5 +153,5 @@ EXAMPLE
      Class1,Class2,Class3
 ```
 
-_See code: [lib/commands/ciutils/testclass/generateList.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.1/lib/commands/ciutils/testclass/generateList.js)_
+_See code: [lib/commands/ciutils/testclass/generateList.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.0/lib/commands/ciutils/testclass/generateList.js)_
 <!-- commandsstop -->
