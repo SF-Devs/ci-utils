@@ -457,25 +457,29 @@
     "@salesforce/ts-types" "^1.5.20"
     chalk "^2.4.2"
 
-"@salesforce/core@^2":
-  version "2.20.11"
-  resolved "https://registry.npmjs.org/@salesforce/core/-/core-2.20.11.tgz"
-  integrity sha512-v0wEGse0ws0yMlfuM569q1PhUMCOYvpXFEFvgXPUdE8OQT8h3/+AlIgQU7I9sEyIg9hzN1nl5UAtIyNllPyPXw==
+"@salesforce/core@^2.36.0":
+  version "2.36.3"
+  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-2.36.3.tgz#172a3a0b926ecc9ff626a58cb4f5c6426aeeb55a"
+  integrity sha512-4SiIKpsHEJGK1tyWhLXwCJnZsfuii6gL4PF+aHEcFwxWiDUe67SsYNlN+8pAETK4EtdEOTaxYc+la4c+5/63TA==
   dependencies:
     "@salesforce/bunyan" "^2.0.0"
-    "@salesforce/kit" "^1.5.0"
+    "@salesforce/kit" "^1.5.17"
     "@salesforce/schemas" "^1.0.1"
-    "@salesforce/ts-types" "^1.0.0"
-    "@types/graceful-fs" "^4.1.3"
-    "@types/jsforce" "1.9.23"
-    "@types/mkdirp" "1.0.0"
+    "@salesforce/ts-types" "^1.5.20"
+    "@types/graceful-fs" "^4.1.5"
+    "@types/jsforce" "^1.9.41"
+    "@types/mkdirp" "^1.0.1"
+    archiver "^5.3.0"
     debug "^3.1.0"
+    faye "^1.4.0"
     graceful-fs "^4.2.4"
+    js2xmlparser "^4.0.1"
     jsen "0.6.6"
-    jsforce "^1.10.0"
+    jsforce "^1.11.0"
     jsonwebtoken "8.5.0"
     mkdirp "1.0.4"
-    sfdx-faye "^1.0.9"
+    semver "^7.3.5"
+    ts-retry-promise "^0.6.0"
 
 "@salesforce/core@^3.7.9":
   version "3.8.0"
@@ -512,13 +516,14 @@
     tslint-microsoft-contrib "^5"
     typescript "^3"
 
-"@salesforce/kit@^1.5.0":
-  version "1.5.7"
-  resolved "https://registry.npmjs.org/@salesforce/kit/-/kit-1.5.7.tgz"
-  integrity sha512-I8uKgSKEOTpPAq4fBrgUkAnUHagJB2G2ie7JORT9dQiF5f33uy+IU9srx9MF87DcSDA/SWTOaxMbUmAUgiTvYA==
+"@salesforce/kit@^1.5.17":
+  version "1.5.38"
+  resolved "https://registry.yarnpkg.com/@salesforce/kit/-/kit-1.5.38.tgz#a7ff915d75e387475a370ad7087690fde1832821"
+  integrity sha512-tAz5oWTlHW4VkQqWilaHihuiFf/opzbhfL6JK1TPtY8CyKCwCMPchoWafe+pCKWOSFTu+WzT/er06zVYC4ITrw==
   dependencies:
-    "@salesforce/ts-types" "^1.5.12"
-    tslib "^1.10.0"
+    "@salesforce/ts-types" "^1.5.20"
+    shx "^0.3.3"
+    tslib "^2.2.0"
 
 "@salesforce/kit@^1.5.34":
   version "1.5.34"
@@ -543,7 +548,7 @@
     sinon "5.1.1"
     tslib "^1.10.0"
 
-"@salesforce/ts-types@^1.0.0", "@salesforce/ts-types@^1.5.12":
+"@salesforce/ts-types@^1.5.12":
   version "1.5.12"
   resolved "https://registry.npmjs.org/@salesforce/ts-types/-/ts-types-1.5.12.tgz"
   integrity sha512-sGEPHFGzslctS0NgdUMDMpZ+ht6XmwcrxUUrUIxnBBmeEz/B80sa5GMP67cZnfVQVBlhqR8fQQRnE1pU3mUoeQ==
@@ -618,17 +623,17 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/graceful-fs@^4.1.3", "@types/graceful-fs@^4.1.5":
+"@types/graceful-fs@^4.1.5":
   version "4.1.5"
   resolved "https://registry.npmjs.org/@types/graceful-fs/-/graceful-fs-4.1.5.tgz"
   integrity sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw==
   dependencies:
     "@types/node" "*"
 
-"@types/jsforce@1.9.23":
-  version "1.9.23"
-  resolved "https://registry.npmjs.org/@types/jsforce/-/jsforce-1.9.23.tgz"
-  integrity sha512-p1aqPWapTAG5xpTpebj4jSs5cwpNHe5PYFtEXCIjsSgfFgIW7GgQb5X/43/M8gkZNcGe8kchykrD9UgYKjz3eQ==
+"@types/jsforce@^1.9.41":
+  version "1.9.41"
+  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.41.tgz#08b31a0d04e14fd5f8a232196e16bc742e22bbed"
+  integrity sha512-J0dReK6EPGR98b4fAowqqQqFXH4DGtPxY2lLrZGcuCthrHYkYNrKnfGf2xM1jwiBC5CGdSEDmWEDwRwwmX25tA==
   dependencies:
     "@types/node" "*"
 
@@ -642,14 +647,7 @@
   resolved "https://registry.npmjs.org/@types/minimatch/-/minimatch-3.0.4.tgz"
   integrity sha512-1z8k4wzFnNjVK/tlxvrWuK5WMt6mydWWP7+zvH5eFep4oj+UkrfiJTRtjCeBXNpwaA/FYqqtb4/QS4ianFpIRA==
 
-"@types/mkdirp@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@types/mkdirp/-/mkdirp-1.0.0.tgz"
-  integrity sha512-ONFY9//bCEr3DWKON3iDv/Q8LXnhaYYaNDeFSN0AtO5o4sLf9F0pstJKKKjQhXE0kJEeHs8eR6SAsROhhc2Csw==
-  dependencies:
-    "@types/node" "*"
-
-"@types/mkdirp@^1.0.2":
+"@types/mkdirp@^1.0.1", "@types/mkdirp@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-1.0.2.tgz#8d0bad7aa793abe551860be1f7ae7f3198c16666"
   integrity sha512-o0K1tSO0Dx5X6xlU5F1D6625FawhC3dU3iqr25lluNv/+/QIVH8RLNEiVokgIZo+mz+87w/3Mkg/VvQS+J51fQ==
@@ -876,7 +874,7 @@ arrify@^1.0.1:
   resolved "https://registry.npmjs.org/arrify/-/arrify-1.0.1.tgz"
   integrity sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=
 
-asap@*, asap@~2.0.3, asap@~2.0.6:
+asap@*, asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.npmjs.org/asap/-/asap-2.0.6.tgz"
   integrity sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
@@ -1478,7 +1476,7 @@ cross-spawn@^7.0.0:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-csprng@*, csprng@~0.1.2:
+csprng@*:
   version "0.1.2"
   resolved "https://registry.npmjs.org/csprng/-/csprng-0.1.2.tgz"
   integrity sha1-S8aPEvo2jSUqWYQcusqXSxirReI=
@@ -1917,14 +1915,7 @@ faye-websocket@>=0.9.1:
   dependencies:
     websocket-driver ">=0.5.1"
 
-faye-websocket@~0.9.1:
-  version "0.9.4"
-  resolved "https://registry.npmjs.org/faye-websocket/-/faye-websocket-0.9.4.tgz"
-  integrity sha1-iFk0x57/sECVSeDAo4Ae0XpAza0=
-  dependencies:
-    websocket-driver ">=0.5.1"
-
-faye@^1.2.0, faye@^1.4.0:
+faye@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/faye/-/faye-1.4.0.tgz"
   integrity sha512-kRrIg4be8VNYhycS2PY//hpBJSzZPr/DBbcy9VWelhZMW3KhyLkQR0HL0k0MNpmVoNFF4EdfMFkNAWjTP65g6w==
@@ -2834,10 +2825,10 @@ jsforce@2.0.0-beta.7:
     strip-ansi "^6.0.0"
     xml2js "^0.4.22"
 
-jsforce@^1.10.0:
-  version "1.10.1"
-  resolved "https://registry.npmjs.org/jsforce/-/jsforce-1.10.1.tgz"
-  integrity sha512-rv+UpBR9n/sWdgLhyPOJuKgT9ZKngypYf9XOHoXVRpSllvTFCjn+M3H81Nu1oYjPH9JKXVS8hL1dmmq8+kOAJg==
+jsforce@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/jsforce/-/jsforce-1.11.0.tgz#7e853b82c534f1fe8e18f432a344bae81881a133"
+  integrity sha512-vYNXJXXdz9ZQNdfRqq/MCJ/zU7JGA7iEduwafQDzChR9FeqXgTNfHTppLVbw9mIniKkQZemmxSOtl7N04lj/5Q==
   dependencies:
     base64-url "^2.2.0"
     co-prompt "^1.0.0"
@@ -2845,7 +2836,7 @@ jsforce@^1.10.0:
     commander "^2.9.0"
     csv-parse "^4.10.1"
     csv-stringify "^1.0.4"
-    faye "^1.2.0"
+    faye "^1.4.0"
     inherits "^2.0.1"
     lodash "^4.17.19"
     multistream "^2.0.5"
@@ -3761,7 +3752,7 @@ propagate@^2.0.0:
   resolved "https://registry.npmjs.org/propagate/-/propagate-2.0.1.tgz"
   integrity sha512-vGrhOavPSTz4QVNuBNdcNXePNdNMaO1xj9yBeH1ScQPjk/rhg9sSlCXPhMkFuaNNW/syTvYqsnbIJxMBfRbbag==
 
-psl@^1.1.24, psl@^1.1.28, psl@^1.1.33:
+psl@^1.1.28, psl@^1.1.33:
   version "1.8.0"
   resolved "https://registry.npmjs.org/psl/-/psl-1.8.0.tgz"
   integrity sha512-RIdOzyoavK+hA18OGGWDqUTsCLhtA7IcZ/6NCs4fFJaHBDab+pDDmDIByWFRQJq2Cd7r1OoQxBGKOaztq+hjIQ==
@@ -3773,11 +3764,6 @@ pump@^3.0.0:
   dependencies:
     end-of-stream "^1.1.0"
     once "^1.3.1"
-
-punycode@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.npmjs.org/punycode/-/punycode-1.4.1.tgz"
-  integrity sha1-wNWmOycYgArY4esPpSachN1BhF4=
 
 punycode@^2.1.0, punycode@^2.1.1:
   version "2.1.1"
@@ -4089,17 +4075,6 @@ set-value@^2.0.0, set-value@^2.0.1:
     is-extendable "^0.1.1"
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
-
-sfdx-faye@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.npmjs.org/sfdx-faye/-/sfdx-faye-1.0.9.tgz"
-  integrity sha512-/p0Ifvhh9rVYj6YmYOBU+psQsP+9RrNrUU4lr1p+HhZhTgnviMIabcgKZUN12S69zUpl0YagpFdMhmxKGkf+5g==
-  dependencies:
-    asap "~2.0.6"
-    csprng "~0.1.2"
-    faye-websocket "~0.9.1"
-    tough-cookie "~2.4.3"
-    tunnel-agent "~0.6.0"
 
 shebang-command@^1.2.0:
   version "1.2.0"
@@ -4576,14 +4551,6 @@ tough-cookie@*:
     punycode "^2.1.1"
     universalify "^0.1.2"
 
-tough-cookie@~2.4.3:
-  version "2.4.3"
-  resolved "https://registry.npmjs.org/tough-cookie/-/tough-cookie-2.4.3.tgz"
-  integrity sha512-Q5srk/4vDM54WJsJio3XNn6K2sCG+CQ8G5Wz6bZhRZoAe/+TxjWB/GlFAnYEbkYVlON9FMk/fE3h2RLpPXo4lQ==
-  dependencies:
-    psl "^1.1.24"
-    punycode "^1.4.1"
-
 tough-cookie@~2.5.0:
   version "2.5.0"
   resolved "https://registry.npmjs.org/tough-cookie/-/tough-cookie-2.5.0.tgz"
@@ -4663,7 +4630,7 @@ tsutils@^2.29.0:
   dependencies:
     tslib "^1.8.1"
 
-tunnel-agent@*, tunnel-agent@^0.6.0, tunnel-agent@~0.6.0:
+tunnel-agent@*, tunnel-agent@^0.6.0:
   version "0.6.0"
   resolved "https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz"
   integrity sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=
