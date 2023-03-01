@@ -6,4 +6,7 @@
 /package-lock.json
 /tmp
 node_modules
-coverage
+/.circleci/
+/.vscode/
+.idea
+.editorconfig
