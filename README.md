@@ -19,7 +19,7 @@ $ npm install -g sfciutils
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-sfciutils/1.2.0 darwin-x64 node-v15.10.0
+sfciutils/1.3.1 darwin-x64 node-v19.3.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -27,18 +27,48 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
+* [`sfdx ciutils:deployment:reportOnDeployment [-d <id>] [-f] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-ciutilsdeploymentreportondeployment--d-id--f--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx ciutils:entitlement:removeIfEqual [-r <string>] [-u <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-ciutilsentitlementremoveifequal--r-string--u-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx ciutils:flow:removeIfEqual [-r <string>] [-u <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-ciutilsflowremoveifequal--r-string--u-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx ciutils:profiles:split -i <string> -o <string> [-d] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-ciutilsprofilessplit--i-string--o-string--d---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx ciutils:testclass:generateList [-p <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-ciutilstestclassgeneratelist--p-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+
+## `sfdx ciutils:deployment:reportOnDeployment [-d <id>] [-f] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+
+Generates a report based on a deployment ID.
+
+```
+USAGE
+  $ sfdx ciutils:deployment:reportOnDeployment [-d <id>] [-f] [-u <string>] [--apiversion <string>] [--json] [--loglevel
+   trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+
+OPTIONS
+  -d, --deploymentid=deploymentid                                                   The ID of the deployment to reprort
+                                                                                    on
+
+  -f, --untildone                                                                   will print status updates every 30s
+                                                                                    until the deployment is finished
+
+  -u, --targetusername=targetusername                                               username or alias for the target
+                                                                                    org; overrides default target org
+
+  --apiversion=apiversion                                                           override the api version used for
+                                                                                    api requests made by this command
+
+  --json                                                                            format output as json
+
+  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
+                                                                                    this command invocation
+
+EXAMPLE
+  $ sfdx ciutils:deployment:reportOnDeployment --deploymentId [Id of a deployment]
+```
 
 ## `sfdx ciutils:entitlement:removeIfEqual [-r <string>] [-u <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
 removes components from the deployment folder in case they already exist and are the same.
 
 ```
-removes components from the deployment folder in case they already exist and are the same.
-
 USAGE
   $ sfdx ciutils:entitlement:removeIfEqual [-r <string>] [-u <string>] [--json] [--loglevel 
   trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
@@ -57,18 +87,16 @@ OPTIONS
 
 EXAMPLE
   $ sfdx ciutils:entitlement:removeIfEqual --retrieved --toupload
-     Class1,Class2,Class3
+    Class1,Class2,Class3
 ```
 
-_See code: [lib/commands/ciutils/entitlement/removeIfEqual.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.0/lib/commands/ciutils/entitlement/removeIfEqual.js)_
+_See code: [lib/commands/ciutils/entitlement/removeIfEqual.js](https://github.com/SF-Devs/ci-utils/blob/v1.3.1/lib/commands/ciutils/entitlement/removeIfEqual.js)_
 
 ## `sfdx ciutils:flow:removeIfEqual [-r <string>] [-u <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
 removes components from the deployment folder in case they already exist and are the same.
 
 ```
-removes components from the deployment folder in case they already exist and are the same.
-
 USAGE
   $ sfdx ciutils:flow:removeIfEqual [-r <string>] [-u <string>] [--json] [--loglevel 
   trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
@@ -87,18 +115,16 @@ OPTIONS
 
 EXAMPLE
   $ sfdx ciutils:entitlement:removeIfEqual --retrieved --toupload
-     Class1,Class2,Class3
+    Class1,Class2,Class3
 ```
 
-_See code: [lib/commands/ciutils/flow/removeIfEqual.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.0/lib/commands/ciutils/flow/removeIfEqual.js)_
+_See code: [lib/commands/ciutils/flow/removeIfEqual.js](https://github.com/SF-Devs/ci-utils/blob/v1.3.1/lib/commands/ciutils/flow/removeIfEqual.js)_
 
 ## `sfdx ciutils:profiles:split -i <string> -o <string> [-d] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
 Split profiles into smaller parts.
 
 ```
-Split profiles into smaller parts.
-
 USAGE
   $ sfdx ciutils:profiles:split -i <string> -o <string> [-d] [--json] [--loglevel 
   trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
@@ -124,19 +150,17 @@ OPTIONS
 
 EXAMPLE
 
-           sfdx metadata:profiles:split -i force-app/main/default/profiles -o force-app/main/default/test
-           //Splits profiles located in specified input dir and copies them into the output dir.
+          sfdx metadata:profiles:split -i force-app/main/default/profiles -o force-app/main/default/test
+          //Splits profiles located in specified input dir and copies them into the output dir.
 ```
 
-_See code: [lib/commands/ciutils/profiles/split.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.0/lib/commands/ciutils/profiles/split.js)_
+_See code: [lib/commands/ciutils/profiles/split.js](https://github.com/SF-Devs/ci-utils/blob/v1.3.1/lib/commands/ciutils/profiles/split.js)_
 
 ## `sfdx ciutils:testclass:generateList [-p <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
 generates a comma separated string with all the names of test classes in the referred folder
 
 ```
-generates a comma separated string with all the names of test classes in the referred folder
-
 USAGE
   $ sfdx ciutils:testclass:generateList [-p <string>] [--json] [--loglevel 
   trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
@@ -150,8 +174,8 @@ OPTIONS
 
 EXAMPLE
   $ sfdx ciutils:testclass:generateList --path
-     Class1,Class2,Class3
+    Class1,Class2,Class3
 ```
 
-_See code: [lib/commands/ciutils/testclass/generateList.js](https://github.com/SF-Devs/ci-utils/blob/v1.2.0/lib/commands/ciutils/testclass/generateList.js)_
+_See code: [lib/commands/ciutils/testclass/generateList.js](https://github.com/SF-Devs/ci-utils/blob/v1.3.1/lib/commands/ciutils/testclass/generateList.js)_
 <!-- commandsstop -->
