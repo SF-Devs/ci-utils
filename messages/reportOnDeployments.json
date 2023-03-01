@@ -1,0 +1,5 @@
+{
+  "commandDescription": "Generates a report based on a deployment ID.",
+  "deploymentIdFlag": "The ID of the deployment to reprort on",
+  "untilDoneFlag" : "will print status updates every 30s until the deployment is finished"
+}
