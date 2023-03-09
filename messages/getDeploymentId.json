@@ -1,5 +1,5 @@
 {
-  "commandDescription": "Generates a report based on a deployment ID.",
-  "deploymentIdFlag": "The ID of the deployment to reprort on",
+  "commandDescription": "Analyses and returns the ID of a deployment request performed with sfdx.",
+  "pathFlag": "the path of the json file resulting from sfdx force:source:deploy command",
   "untilDoneFlag" : "will print status updates every 30s until the deployment is finished"
 }
