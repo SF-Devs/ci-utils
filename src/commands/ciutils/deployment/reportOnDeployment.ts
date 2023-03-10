@@ -62,7 +62,7 @@ export default class Org extends SfdxCommand {
     if (this.deploymentStatus.deployResult.numberTestErrors > 0) {
       await this.displayTestErrors();
     }
-    throw new SfdxError('The deployment failed successfully');
+    throw new SfdxError('The deployment failed successfully. STATUS='+this.deploymentStatus.deployResult.status);
   }
   public async displayHeader() {
     this.ux.log( '*** Deploying ***');
@@ -124,7 +124,7 @@ public async reportSuccess() {
     const b1 = await multibar.create(deploymentResult.deployResult.numberComponentsTotal, deploymentResult.deployResult.numberComponentsDeployed + deploymentResult.deployResult.numberComponentErrors, {filename: 'Components'} );
     const b2 = await multibar.create(deploymentResult.deployResult.numberTestsTotal, deploymentResult.deployResult.numberTestsCompleted + deploymentResult.deployResult.numberTestErrors, {filename: 'Test Methods'} );
 
-    while (deploymentResult.deployResult.done !== true) {
+    while (deploymentResult.deployResult.done !== true && this.deploymentStatus.deployResult.status !="InProgress") {
       await this.wait(5000);
       deploymentResult = await conn.request('/metadata/deployRequest/' + this.flags.deploymentid + '?includeDetails=true') as object;
       b1.update(deploymentResult.deployResult.numberComponentsDeployed + deploymentResult.deployResult.numberComponentErrors, deploymentResult.deployResult.numberComponentsTotal);
