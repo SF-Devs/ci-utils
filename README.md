@@ -21,7 +21,7 @@ $ npm install -g sfciutils
 $ sfdx COMMAND
 running command...
 $ sfdx (--version)
-sfciutils/1.3.4 darwin-x64 node-v19.3.0
+sfciutils/1.3.5 darwin-x64 node-v19.3.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -60,7 +60,7 @@ EXAMPLES
   $ sfdx ciutils:deployment:getDeloymentId --path [path to JSON result from sfdx force:source:deploy]
 ```
 
-_See code: [src/commands/ciutils/deployment/getDeploymentId.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.4/src/commands/ciutils/deployment/getDeploymentId.ts)_
+_See code: [src/commands/ciutils/deployment/getDeploymentId.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.5/src/commands/ciutils/deployment/getDeploymentId.ts)_
 
 ## `sfdx ciutils:deployment:reportOnDeployment [-d <id>] [-f] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -91,7 +91,7 @@ EXAMPLES
   $ sfdx ciutils:deployment:reportOnDeployment --deploymentId [Id of a deployment]
 ```
 
-_See code: [src/commands/ciutils/deployment/reportOnDeployment.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.4/src/commands/ciutils/deployment/reportOnDeployment.ts)_
+_See code: [src/commands/ciutils/deployment/reportOnDeployment.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.5/src/commands/ciutils/deployment/reportOnDeployment.ts)_
 
 ## `sfdx ciutils:entitlement:removeIfEqual [-r <string>] [-u <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -119,7 +119,7 @@ EXAMPLES
     Class1,Class2,Class3
 ```
 
-_See code: [src/commands/ciutils/entitlement/removeIfEqual.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.4/src/commands/ciutils/entitlement/removeIfEqual.ts)_
+_See code: [src/commands/ciutils/entitlement/removeIfEqual.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.5/src/commands/ciutils/entitlement/removeIfEqual.ts)_
 
 ## `sfdx ciutils:flow:removeIfEqual [-r <string>] [-u <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -147,7 +147,7 @@ EXAMPLES
     Class1,Class2,Class3
 ```
 
-_See code: [src/commands/ciutils/flow/removeIfEqual.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.4/src/commands/ciutils/flow/removeIfEqual.ts)_
+_See code: [src/commands/ciutils/flow/removeIfEqual.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.5/src/commands/ciutils/flow/removeIfEqual.ts)_
 
 ## `sfdx ciutils:profiles:split -i <string> -o <string> [-d] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -181,7 +181,7 @@ EXAMPLES
           //Splits profiles located in specified input dir and copies them into the output dir.
 ```
 
-_See code: [src/commands/ciutils/profiles/split.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.4/src/commands/ciutils/profiles/split.ts)_
+_See code: [src/commands/ciutils/profiles/split.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.5/src/commands/ciutils/profiles/split.ts)_
 
 ## `sfdx ciutils:testclass:generateList [-p <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -206,7 +206,7 @@ EXAMPLES
     Class1,Class2,Class3
 ```
 
-_See code: [src/commands/ciutils/testclass/generateList.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.4/src/commands/ciutils/testclass/generateList.ts)_
+_See code: [src/commands/ciutils/testclass/generateList.ts](https://github.com/SF-Devs/ci-utils/SF-Devs/blob/v1.3.5/src/commands/ciutils/testclass/generateList.ts)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin
