@@ -36,6 +36,7 @@ export default class Org extends SfdxCommand {
 
   // Set this to true if your command requires a project workspace; 'requiresProject' is false by default
   protected static requiresProject = false;
+
   public deploymentStatus;
   public async run(): Promise<AnyJson> {
     // validate mandatory input
@@ -49,7 +50,7 @@ export default class Org extends SfdxCommand {
     if (untilDone === true) {
       await this.iterateUntilDone(this.deploymentStatus, conn);
     }
-
+    this.deploymentStatus = await conn.request('/metadata/deployRequest/' + this.flags.deploymentid + '?includeDetails=true') as object;
     this.displayWarnings();
 
     if (this.deploymentStatus.deployResult.status === 'Succeeded') {
@@ -62,7 +63,7 @@ export default class Org extends SfdxCommand {
     if (this.deploymentStatus.deployResult.numberTestErrors > 0) {
       await this.displayTestErrors();
     }
-    throw new SfdxError('The deployment failed successfully. STATUS='+this.deploymentStatus.deployResult.status);
+    throw new SfdxError('The deployment failed successfully.');
   }
   public async displayHeader() {
     this.ux.log( '*** Deploying ***');
@@ -118,19 +119,24 @@ public async reportSuccess() {
       barIncompleteChar: '\u2591',
       hideCursor: true,
       noTTYOutput: true,
-      notTTYSchedule: 10000
+      notTTYSchedule: 10000,
+      emptyOnZero: true
 
     });
     const b1 = await multibar.create(deploymentResult.deployResult.numberComponentsTotal, deploymentResult.deployResult.numberComponentsDeployed + deploymentResult.deployResult.numberComponentErrors, {filename: 'Components'} );
     const b2 = await multibar.create(deploymentResult.deployResult.numberTestsTotal, deploymentResult.deployResult.numberTestsCompleted + deploymentResult.deployResult.numberTestErrors, {filename: 'Test Methods'} );
 
-    while (deploymentResult.deployResult.done !== true && this.deploymentStatus.deployResult.status !="InProgress") {
-      await this.wait(5000);
+      while (deploymentResult.deployResult.done === false || deploymentResult.deployResult.status ==="InProgress") {
       deploymentResult = await conn.request('/metadata/deployRequest/' + this.flags.deploymentid + '?includeDetails=true') as object;
-      b1.update(deploymentResult.deployResult.numberComponentsDeployed + deploymentResult.deployResult.numberComponentErrors, deploymentResult.deployResult.numberComponentsTotal);
-      b2.update(deploymentResult.deployResult.numberTestsCompleted + deploymentResult.deployResult.numberTestErrors, deploymentResult.deployResult.numberTestsTotal);
+      b1.setTotal(deploymentResult.deployResult.numberComponentsTotal);
+      b2.setTotal(deploymentResult.deployResult.numberTestsTotal);
+      b1.update(deploymentResult.deployResult.numberComponentsDeployed + deploymentResult.deployResult.numberComponentErrors);
+      b2.update(deploymentResult.deployResult.numberTestsCompleted + deploymentResult.deployResult.numberTestErrors);
+      await this.wait(2000);
+     //this.ux.log('Running iteration done ='+deploymentResult.deployResult.done + ' Status='+deploymentResult.deployResult.status );
     }
     multibar.stop();
+    return;
   }
   public wait(timeout) {
     return new Promise(resolve => {
